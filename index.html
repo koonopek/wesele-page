@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah & John's Wedding</title>
+    <title>Ślub Milenki i Michasia</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: white;
+            font-family: 'Charm', sans-serif;
+            font-size: 1.2rem;
             color: #333;
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
 
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            max-width: 800px;
+            object-fit: cover;
+            margin-bottom: 40px;
+            display: block;
+            margin: 0 auto 40px auto;
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
         header {
@@ -27,86 +41,201 @@
         }
 
         h1 {
+            font-family: 'Parisienne', cursive;
+            font-size: 3.5rem;
             color: #2e8b57;
-            font-size: 2.5em;
-            font-weight: 300;
             margin-bottom: 10px;
         }
 
         .date {
-            font-style: italic;
-            color: #666;
+            font-family: 'Parisienne', cursive;
+            font-size: 1.5rem;
+            color: #2e8b57;
         }
 
-        .content {
-            margin-top: 40px;
+        .section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            border: 1px solid rgba(46, 139, 87, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(46, 139, 87, 0.05);
+        }
+
+        .section::after {
+            content: '♥';
+            display: block;
+            text-align: center;
+            color: #2e8b57;
+            font-size: 2rem;
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 0 15px;
+        }
+
+        .section {
+            border-bottom: 2px solid #e8f5e9;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
         }
 
         h2 {
             color: #2e8b57;
-            font-weight: 300;
-            margin-top: 30px;
+            font-size: 2rem;
+            margin-top: 0;
             margin-bottom: 20px;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .details {
+            margin-top: 20px;
         }
 
-        li {
-            margin-bottom: 15px;
+        .date-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin: 20px 0;
         }
 
-        .image-container {
+        .date-circle .day {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2e8b57;
+            margin-top: 10px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .contact div {
+            margin: 10px;
+        }
+
+        footer {
             text-align: center;
-            margin-bottom: 40px;
+            color: #2e8b57;
+            margin-top: 40px;
         }
 
-        .image-container img {
+        .map-container {
+            position: relative;
+            padding-bottom: 75%;
+            /* 4:3 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
             max-width: 100%;
-            height: auto;
-            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         @media (max-width: 600px) {
-            .container {
-                padding: 20px;
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 15px;
             }
         }
     </style>
 </head>
 
 <body>
+    <img src="first.jpeg" alt="Wedding hero image" class="hero-image">
     <div class="container">
         <header>
-            <h1>Sarah & John</h1>
-            <p class="date">June 15, 2024</p>
+            <h1>Będzie ślub!</h1>
+            <h1>Milenka & Michaś</h1>
+            <p class="date">piątek, 13 czerwca, 16:30</p>
         </header>
-        <div class="image-container">
-            <img src="/placeholder.svg?height=300&width=800" alt="Decorative wedding image" width="800" height="300">
+
+        <div class="section">
+            <h2>Gdzie balujemy?</h2>
+            Przepitki & Przekąski
+            Przepitki 18, Nowe Miasto (koło Płońska)
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2419.441172653399!2d20.569132295593263!3d52.67007065317765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c205949d42cd9%3A0x8f116c8b630aac1b!2sPrzepitki%20%26%20Przek%C4%85ski!5e0!3m2!1spl!2spl!4v1737907293623!5m2!1spl!2spl"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-        <div class="content">
-            <h2>Wedding Details</h2>
-            <ul>
-                <li>Saturday, June 15, 2024 at 4:00 PM</li>
-                <li>Green Meadows Park</li>
-                <li>123 Park Avenue, Greenville, GR 12345</li>
-            </ul>
-            <h2>Schedule</h2>
-            <ul>
-                <li>4:00 PM - Ceremony</li>
-                <li>5:00 PM - Cocktail Hour</li>
-                <li>6:00 PM - Dinner & Reception</li>
-                <li>11:00 PM - Send-off</li>
-            </ul>
-            <h2>Dress Code</h2>
-            <p>Semi-formal / Garden Party Attire</p>
-            <h2>RSVP</h2>
-            <p>Please RSVP by May 1, 2024</p>
-            <p>Email: sarahandjohn@wedding.com</p>
-            <p>Phone: (555) 123-4567</p>
+
+        <div class="section">
+            <h2>Jak się ubrać?</h2>
+            <p>Ślub będzie zorganizowany w plenerze, pod
+                gołym niebem. Prosimy o zabranie ze sobą
+                butów na zmianę, a także parasolek na
+                wypadek deszczu</p>
+            <p>Wesele będzie w półplenerze. Na wieczór
+                warto zabrać ze sobą nakrycie wierzchnie</p>
         </div>
+
+        <div class="section">
+            <h2>Potwierzenie obecności</h2>
+            <p>do 30.04.2025</p>
+            <div class="contact">
+                <div>
+                    <p><strong>Milenka</strong></p>
+                    <p>783 834 365</p>
+                </div>
+                <div>
+                    <p><strong>Michaś</strong></p>
+                    <p>791 793 888</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Plan dnia</h2>
+        </div>
+
+        <div class="section">
+            <h2>Nocleg</h2>
+            <p>
+                Niedaleko sali weslnej znajduje się pensjonat
+                <a href="https://stajniaharmonypark.pl/pensjonat-dla-ludzi/" target="_blank">Harmony Park</a>. Istnieje
+                możliwość
+                zarezerwowania sobie noclegu. Zorganizujemy
+                transport z sali weselnej o godzinie 1 oraz 3.
+
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Zdjęcia i film</h2>
+            <p>Na tę część trzeba jeszcze zaczekać :)</p>
+        </div>
+
+        <footer>
+            <p>Milenka i Michaś 2025</p>
+        </footer>
     </div>
 </body>
 
