@@ -1,240 +1,263 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ślub Milenki i Michasia</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700');
+      @import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700");
 
+      body {
+        font-family: "Fuzzy Bubbles";
+        font-size: 1.2rem;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
 
-        body {
-            font-family: 'Fuzzy Bubbles';
-            font-size: 1.2rem;
-            color: #333;
-            margin: 0;
-            padding: 0;
+      .hero-image {
+        width: 100%;
+        height: 400px;
+        max-width: 800px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 0 auto;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        color: #2e8b57;
+      }
+
+      .date {
+        font-size: 1.5rem;
+        color: #2e8b57;
+      }
+
+      .section {
+        background-color: white;
+        padding: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        border: 1px solid rgba(46, 139, 87, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 2px 15px rgba(46, 139, 87, 0.05);
+      }
+
+      .section::after {
+        content: "♥";
+        display: block;
+        text-align: center;
+        color: #2e8b57;
+        font-size: 2rem;
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 0 15px;
+      }
+
+      .section {
+        border-bottom: 2px solid #e8f5e9;
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+      }
+
+      h2 {
+        color: #2e8b57;
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      .details {
+        margin-top: 20px;
+      }
+
+      .date-circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin: 20px 0;
+      }
+
+      .date-circle .day {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .time {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #2e8b57;
+        margin-top: 10px;
+      }
+
+      .contact {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .contact div {
+        margin: 10px;
+      }
+
+      footer {
+        text-align: center;
+        color: #2e8b57;
+        margin-top: 40px;
+      }
+
+      .gift-img {
+        display: block;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto 20px;
+        border-radius: 8px;
+      }
+
+      .map-container {
+        position: relative;
+        padding-bottom: 75%;
+        /* 4:3 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .section {
+          padding: 15px;
         }
 
         .hero-image {
-            width: 100%;
-            height: 400px;
-            max-width: 800px;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto 0 auto;
+          object-position: 10% center;
         }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            color: #2e8b57;
-        }
-
-        .date {
-            font-size: 1.5rem;
-            color: #2e8b57;
-        }
-
-        .section {
-            background-color: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            text-align: center;
-            position: relative;
-            border: 1px solid rgba(46, 139, 87, 0.1);
-            border-radius: 12px;
-            box-shadow: 0 2px 15px rgba(46, 139, 87, 0.05);
-        }
-
-        .section::after {
-            content: '♥';
-            display: block;
-            text-align: center;
-            color: #2e8b57;
-            font-size: 2rem;
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            padding: 0 15px;
-        }
-
-        .section {
-            border-bottom: 2px solid #e8f5e9;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-        }
-
-        h2 {
-            color: #2e8b57;
-            font-size: 2rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        .details {
-            margin-top: 20px;
-        }
-
-        .date-circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            margin: 20px 0;
-        }
-
-        .date-circle .day {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .time {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2e8b57;
-            margin-top: 10px;
-        }
-
-        .contact {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .contact div {
-            margin: 10px;
-        }
-
-        footer {
-            text-align: center;
-            color: #2e8b57;
-            margin-top: 40px;
-        }
-
-        .map-container {
-            position: relative;
-            padding-bottom: 75%;
-            /* 4:3 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            margin-top: 20px;
-        }
-
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .section {
-                padding: 15px;
-            }
-
-            .hero-image {
-                object-position: 10% center;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <img src="first.jpg" alt="Wedding hero image" class="hero-image">
+  <body>
+    <img src="first.jpg" alt="Wedding hero image" class="hero-image" />
     <div class="container">
-        <header>
-            <h1>Będzie ślub!</h1>
-            <h2>Milenka & Michaś</h2>
-            <p class="date">piątek, 13 czerwca, 16:30</p>
-        </header>
+      <header>
+        <h1>Będzie ślub!</h1>
+        <h2>Milenka & Michaś</h2>
+        <p class="date">piątek, 13 czerwca, 16:30</p>
+      </header>
 
-        <div class="section">
-            <h2>Gdzie balujemy?</h2>
-            Przepitki & Przekąski
-            Przepitki 18, Nowe Miasto (koło Płońska)
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2419.441172653399!2d20.569132295593263!3d52.67007065317765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c205949d42cd9%3A0x8f116c8b630aac1b!2sPrzepitki%20%26%20Przek%C4%85ski!5e0!3m2!1spl!2spl!4v1737907293623!5m2!1spl!2spl"
-                    style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+      <div class="section">
+        <h2>Gdzie balujemy?</h2>
+        Przepitki & Przekąski Przepitki 18, Nowe Miasto (koło Płońska)
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2419.441172653399!2d20.569132295593263!3d52.67007065317765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c205949d42cd9%3A0x8f116c8b630aac1b!2sPrzepitki%20%26%20Przek%C4%85ski!5e0!3m2!1spl!2spl!4v1737907293623!5m2!1spl!2spl"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
+      </div>
 
-        <div class="section">
-            <h2>Jak się ubrać?</h2>
-            <p>Ślub będzie zorganizowany w plenerze, pod
-                gołym niebem. Zachęcamy do zabrania ze sobą
-                butów na zmianę, a także parasolek na
-                wypadek deszczu</p>
-            <p>Wesele będzie w półplenerze. Na wieczór
-                warto zabrać ze sobą okrycie wierzchnie</p>
+      <div class="section">
+        <h2>Jak się ubrać?</h2>
+        <p>
+          Ślub będzie zorganizowany w plenerze, pod gołym niebem. Zachęcamy do
+          zabrania ze sobą butów na zmianę, a także parasolek na wypadek deszczu
+        </p>
+        <p>
+          Wesele będzie w półplenerze. Na wieczór warto zabrać ze sobą okrycie
+          wierzchnie
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Prezenty</h2>
+        <img src="prezent.png" class="gift-img" alt="Gift" />
+        <p>
+          Zamiast kwiatów i wina, prosimy o materiały szkolne: kredki, ołówki
+          flamastry, farby, zeszyty, plasteline itp
+        </p>
+        <p>
+          Rzeczy zawieziemy do: Dom Dziecka w Siedlcach "Dom pod Kasztanami"
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Potwierdzenie obecności</h2>
+        <p>do 30.04.2025</p>
+        <div class="contact">
+          <div>
+            <p><strong>Milenka</strong></p>
+            <p>783 834 365</p>
+          </div>
+          <div>
+            <p><strong>Michaś</strong></p>
+            <p>791 793 888</p>
+          </div>
         </div>
+      </div>
 
-        <div class="section">
-            <h2>Potwierdzenie obecności</h2>
-            <p>do 30.04.2025</p>
-            <div class="contact">
-                <div>
-                    <p><strong>Milenka</strong></p>
-                    <p>783 834 365</p>
-                </div>
-                <div>
-                    <p><strong>Michaś</strong></p>
-                    <p>791 793 888</p>
-                </div>
-            </div>
-        </div>
+      <div class="section">
+        <h2>Plan dnia</h2>
+        <p>Wkrótce :)</p>
+      </div>
 
-        <div class="section">
-            <h2>Plan dnia</h2>
-            <p>Wkrótce :)</p>
-        </div>
+      <div class="section">
+        <h2>Nocleg</h2>
+        <p>
+          Niedaleko sali weslnej znajduje się pensjonat
+          <a
+            href="https://stajniaharmonypark.pl/pensjonat-dla-ludzi/"
+            target="_blank"
+            >Harmony Park</a
+          >. Jak potrzebujecie noclegu, dajcie znać (140zł/osoba). Zorganizujemy
+          transport z sali weselnej o godzinie 1:00 i 3:00 oraz 4:30.
+        </p>
+      </div>
 
-        <div class="section">
-            <h2>Nocleg</h2>
-            <p>
-                Niedaleko sali weslnej znajduje się pensjonat
-                <a href="https://stajniaharmonypark.pl/pensjonat-dla-ludzi/" target="_blank">Harmony Park</a>. Jak
-                potrzebujecie noclegu, dajcie znać (140zł/osoba). Zorganizujemy
-                transport z sali weselnej o godzinie 1:00 i 3:00 oraz 4:30.
+      <div class="section">
+        <h2>Zdjęcia i film</h2>
+        <p>Na tę część trzeba jeszcze zaczekać :)</p>
+      </div>
 
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Zdjęcia i film</h2>
-            <p>Na tę część trzeba jeszcze zaczekać :)</p>
-        </div>
-
-        <footer>
-            <p>Milenka i Michaś 2025</p>
-        </footer>
+      <footer>
+        <p>Milenka i Michaś 2025</p>
+      </footer>
     </div>
-</body>
-
+  </body>
 </html>
